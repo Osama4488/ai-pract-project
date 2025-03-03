@@ -777,6 +777,8 @@ export default function CVBuilder() {
             </button>
           </div>
         </motion.section>
+
+        <div>new content</div>
       </main>
     </div>
   );
