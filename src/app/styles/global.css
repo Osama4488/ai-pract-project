@@ -1,4 +1,4 @@
-/* @import "tailwindcss";
+@import "tailwindcss";
 
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -21,10 +21,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-} */
-
-
-/* styles/globals.css */
+}
+/* src/app/global.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,6 +43,18 @@ body {
   0% { transform: scale(0.9); opacity: 0; }
   60% { transform: scale(1.05); opacity: 1; }
   100% { transform: scale(1); }
+}
+@keyframes scrollTestimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
+}
+@keyframes scrollVerticalUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+@keyframes scrollVerticalDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
 }
 
 .animate-fade-in {
@@ -73,4 +83,16 @@ body {
 }
 .animate-bounce-in-delay {
   animation: bounceIn 0.6s ease-out 0.2s both;
+}
+.animate-scroll-testimonials {
+  animation: scrollTestimonials 15s linear infinite;
+}
+.animate-scroll-vertical-up {
+  animation: scrollVerticalUp 12s linear infinite;
+}
+.animate-scroll-vertical-down {
+  animation: scrollVerticalDown 12s linear infinite;
+}
+.hover\:pause-animation:hover {
+  animation-play-state: paused;
 }
